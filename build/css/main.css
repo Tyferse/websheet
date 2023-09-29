@@ -1,0 +1,28 @@
+:root {
+    background-color: antiquewhite;
+}
+header {
+    color: #ffd541;
+    text-align: center;
+}
+main {
+    text-align: center;
+}
+table {
+    border: 20px;
+    align-content: center;
+    border-color: black;
+    border-collapse: collapse;
+}
+footer {
+    text-align: center;
+}
+footer .footer-bg-img {
+    background-attachment: scroll;
+    height: 100px;
+    width: 110%;
+}
+
+tr, th, td{
+    border-collapse: collapse;
+}
