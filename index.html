@@ -44,7 +44,8 @@
         <br>
         <br>
       </section>
-      <section class="lz_qd_eq">
+      <section class="russian_experimental_field">
+        <!-- Фрагмент с LaTeX -->
         <p>
           Рассчёт скорости исстребления ящерами русической цивилизации - решение уравнения \(ax^2 + bx + c = 0\):
           \[x_{1,2} = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
@@ -54,12 +55,13 @@
         </p>
         <br>
         <br>
-        <table>
+        <!-- Таблица -->
+        <table class="lz_math_eq"  border="-">
           <!-- <colgroup>
             <col style="background-color: red;">
           </colgroup>-->
           <tr>
-            <th colspan="4" bgcolor="red">Список глпвных формул и уравнений ящеров, используемых в рассчётах для истребления русической цивилизации</th>
+            <th colspan="4">Список глпвных формул и уравнений ящеров, используемых в рассчётах для истребления русической цивилизации</th>
           </tr>
           <tr>
             <td colspan="3">1000</td>
@@ -85,9 +87,42 @@
         <br>
         <br>
         <br>
-        <form action="search" method="get">
-          Search form: <input type="text" name="saerch area">
-          <input type="submit">
+        <!-- Формы -->
+        <form action="search" method="get" id="srh">
+          Search form: <input type="text" name="search q">
+          <button type="submit">Search</button>
+        </form>
+        <br>
+        <br>
+        <form action="login" method="post">
+          <fieldset>
+            <legend>Форма регистрации русов:</legend>
+            <table class="form_fill">
+              <tr>
+                <td>
+                  <label for="nm">Имя:</label>
+                  <input type="text" id="nm">
+                </td>
+                <td>
+                  <label for="an_rus_nm">Имя на языке древних русов:</label>
+                  <input type="text" id="an_rus_nm">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Проживание:
+                  <select>
+                    <option value="1">Империя древних русов</option>
+                    <option value="2">Руссо-еврейское княжество</option>
+                    <option value="3">Земли ящеров</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="submit" id="sub_btn1">
+                </td>
+              </tr>
+            </table>
+          </fieldset>
         </form>
       </section>
     </article>
