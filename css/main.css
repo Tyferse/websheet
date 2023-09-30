@@ -14,22 +14,6 @@ table {
     border-color: black;
     border-collapse: collapse;
 }
-footer {
-    text-align: center;
-}
-footer .footer-bg-img {
-    background-attachment: scroll;
-    height: 100px;
-    width: 110%;
-}
-.lz_math_eq > tr, td {
-    border-collapse: collapse;
-    text-align-all: center;
-}
-th {
-    color: #5cac26;
-    background-color: #ac3121;
-}
 .form_fill {
     text-align: justify;
 }
