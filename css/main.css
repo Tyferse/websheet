@@ -9,8 +9,8 @@ main {
     text-align: center;
 }
 table {
-    border: 20px;
-    align-content: center;
+    margin: 0px auto;
+    border: 40px;
     border-color: black;
     border-collapse: collapse;
 }
@@ -22,7 +22,20 @@ footer .footer-bg-img {
     height: 100px;
     width: 110%;
 }
-
-tr, th, td{
+.lz_math_eq > tr, td {
     border-collapse: collapse;
+    text-align-all: center;
+}
+th {
+    color: #5cac26;
+    background-color: #ac3121;
+}
+.form_fill {
+    text-align: justify;
+}
+#nm {
+    width: 84%;
+}
+#sub_btn1 {
+    width: 100%;
 }
