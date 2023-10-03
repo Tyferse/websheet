@@ -26,7 +26,7 @@ footer {
 footer .footer-bg-img {
     background-attachment: scroll;
     height: 100px;
-    width: 110%;
+    width: 100%;
 }
 .lz_math_eq > tr, td {
     border-collapse: collapse;
