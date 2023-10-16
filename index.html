@@ -7,13 +7,23 @@
   <meta name="description" content="Just create rofl things instead of normal website. It's about &quot;history&quot; of confrontation of ancient ruses and lizards.">
   <link rel="icon" href="image/favicon.jpg" type="image/x-icon">
   <link rel="stylesheet" href="css/main.css" media="all">
-  <title>Древние русы против ящеров</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Древние русы против ящеров</title>
+  <style>
+    table {
+      margin: 0 auto;
+      border: solid 2px;
+      border-color: black;
+      border-collapse: collapse;
+      /*background-image: url(/build1/image/bestscreenever.png);*/
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Великие подвиги наших предков</h1>
+    <h1 style="color: goldenrod">Великие подвиги наших предков</h1>
+<!--    <h1>Великие подвиги наших предков</h1>-->
     <nav>
       <ul>
         <li>Введение</li>
@@ -56,7 +66,7 @@
       </section>
       <section class="russian_experimental_field">
         <!-- Фрагмент с LaTeX -->
-        <p>
+        <p class="one">
           Рассчёт скорости исстребления ящерами русической цивилизации - решение уравнения \(ax^2 + bx + c = 0\):
           \[x_{1,2} = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
           где \(b^2 - \) бить двойными ударами,
@@ -64,9 +74,12 @@
           а \(4ac - \) четвертовать антихристским кинжалом, орудием ящеров.
         </p>
         <br>
+        <p class="one two switch">
+          That is a great truth.
+        </p>
         <br>
         <!-- Таблица -->
-        <table class="lz_math_eq"  border="-">
+        <table class="lz_math_eq">
           <!-- <colgroup>
             <col style="background-color: red;">
           </colgroup>-->
@@ -79,7 +92,7 @@
           </tr>
           <tr>
             <td>5000</td>
-            <td colspan="2" rowspan="2">6000</td>
+            <td id="ctd" colspan="2" rowspan="2">6000</td>
             <td>8000</td>
           </tr>
           <tr>
@@ -109,17 +122,17 @@
             <legend>Форма регистрации русов:</legend>
             <table class="form_fill">
               <tr>
-                <td>
+                <td colspan="3">
                   <label for="nm">Имя:</label>
                   <input type="text" id="nm">
                 </td>
-                <td>
+                <td colspan="3">
                   <label for="an_rus_nm">Имя на языке древних русов:</label>
                   <input type="text" id="an_rus_nm">
                 </td>
               </tr>
               <tr>
-                <td>
+                <td colspan="2">
                   Проживание:
                   <select>
                     <optgroup label="Выберите государство">
@@ -129,7 +142,12 @@
                     </optgroup>
                   </select>
                 </td>
-                <td>
+                <td></td>
+                <td colspan="2">
+                  <label for="check1">Пьёшь воду байкальскую?</label>
+                  <input type="checkbox" id="check1">
+                </td>
+                <td colspan="1">
                   <input type="submit" id="sub_btn1">
                 </td>
               </tr>
@@ -141,8 +159,7 @@
   </main>
   <footer>
     <br>
-    <h3><u>Ящерской пропаганде не скрыть великую правду!</u></h3>
-    <img src="image/liz_rus_versus_footer.jpg" class="footer-bg-img">
+    <h3 class="final_cite"><u>Ящерской пропаганде не скрыть великую правду!</u></h3>
   </footer>
 </body>
 </html>
