@@ -1,10 +1,10 @@
 :root {
     background-color: antiquewhite;
-}
-header {
     text-align: center;
+    width: 90%;
+    margin: 0 auto;
 }
-h1 {
+h1, h2 {
     color: #de941f;
 }
 ul {
@@ -14,34 +14,52 @@ ul {
 main {
     text-align: center;
 }
-table {
-    margin: 0px auto;
-    border: 40px;
-    border-color: black;
-    border-collapse: collapse;
+p {
+    font-size: 20px;
+    border: 0.2em solid firebrick;
 }
 footer {
     text-align: center;
-}
-footer .footer-bg-img {
-    background-attachment: scroll;
     height: 100px;
-    width: 100%;
+    background-image: url(/build1/image/liz_rus_versus_footer.jpg);
 }
-.lz_math_eq > tr, td {
+.final_cite {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.lz_math_eq > tbody > tr > td {
     border-collapse: collapse;
     text-align-all: center;
+    background-color: #bfe089;
+}
+@font-face {
+    font-family: "Pixelify";
+    src: url(/build1/fonts/PixelifySans-Medium.ttf);
+}
+#ctd {
+    background-color: #9a5565;
+    color: azure;
+    font-size: 1.5em;
+    font-family: "Pixelify", serif;
 }
 th {
     color: #5cac26;
     background-color: #ac3121;
 }
-.form_fill {
+.form_fill, .nm {
     text-align: justify;
 }
 #nm {
-    width: 84%;
+    width: 83%;
+}
+#check1 {
+    text-align: center;
 }
 #sub_btn1 {
     width: 100%;
+}
+a[href="https://www.youtube.com/watch?v=gYToaNJJftw"] {
+    font-size: 1.25em;
+}
+input[type="text"] {
+    padding: 0 0 0 10px;
 }
