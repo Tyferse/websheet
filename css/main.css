@@ -21,7 +21,7 @@ p {
 footer {
     text-align: center;
     height: 100px;
-    background-image: url(/build1/image/liz_rus_versus_footer.jpg);
+    background-image: url(/image/liz_rus_versus_footer.jpg);
 }
 .final_cite {
     background-color: rgba(255, 255, 255, 0.5);
@@ -33,7 +33,7 @@ footer {
 }
 @font-face {
     font-family: "Pixelify";
-    src: url(/build1/fonts/PixelifySans-Medium.ttf);
+    src: url(/fonts/PixelifySans-Medium.ttf);
 }
 #ctd {
     background-color: #9a5565;
