@@ -3,70 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="tyferse">
-  <meta name="description" content="Something new about blocks.">
+  <meta name="description" content="Something new..">
 <!--  <link rel="icon" href="images/favicon.jpg" type="images/x-icon">-->
-  <link rel="stylesheet" href="styles/niam.css" media="all">
+  <link rel="stylesheet" href="styles/niam2.css" media="all">
   <title>SSStyle</title>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li>неопределённый интеграл</li>
-      <li>опредлеённый интеграл</li>
-      <li>криволинейный интеграл</li>
-    </ul>
-  </nav>
-  <aside> <!-- Фактическая ширина 220px -->
-    <ul>
-      <li>Двойной интеграл</li>
-      <li>Тройной интеграл</li>
-      <li>Поверхностный интеграл</li>
-    </ul>
-  </aside>
-  <article>
-    <br>
-    <section> <!-- Фактическая ширина 700px -->
-      <div class="d1">
-        ИНТЕГРИРУЕМ В УМЕ
-      </div>
-      <br>
-      <div class="d2">
-        ИНТЕГРИРУЕМ В УМЕ
-      </div>
-      <br>
-      <div class="d3">
-        ИНТЕГРИРУЕМ В УМЕ
-      </div>
-      <br>
-      <div class="d4">
-        ИНТЕГРИРУЕМ В УМЕ
-      </div>
-      <br>
-    </section>
-    <section>
-      <div>
-        <img src="/build1/images/ruscatchedlizard_red.jpg">
-      </div>
-      <br>
-      <p>
-        ИНТЕГРИРОВАНИЕ В УМЕ <span id="span1">БЕТА-ФУНКЦИИ</span>
-      </p>
-      <br>
-      <br>
-      <p>
-        ИНТЕГРИРОВАНИЕ В УМЕ <span id="span2">ГАММА-ФУНКЦИИ</span>
-      </p>
-      <br>
-      <p>
-        ИНТЕГРИРОВАНИЕ В УМЕ <span id="span3">ДЗЕТА-ФУНКЦИИ РИМАНА</span>
-      </p>
-    </section>
-  </article>
+  <h1>All your base belong to us</h1>
+  <div class="box"><p class="parph">Text in .box</p></div>
+  <p class="parph">Text <i>not in</i> <i>.box</i></p>
+  <div>родитель
+    <p class="parph">окрасит в красный, т.к. ребенок родителя</p>
+    <pre><p>не окрасит в красный</p></pre>
+    <p>окрасит<p>
+      родитель
+  </div>
+  <div>
+    <p>этот параграф не является братом или сестрой дива, это ребенок</p>
+  </div>
+  <p>является</p>
+  <p>не является</p>
+  <div>
+    <p>ребенок </p>
+  </div>
+  <p>соседний комбинатор</p>
+  <p>не примыкает ик div</p>
+  <a class="linkoch"  href="https://dev.to/kcl/how-to-define-flutter-theme-c26">ссЫслОЧКА</a>
   <br>
-  <div id="after-body">
-    <footer>
-      КОНТОРА ТЕСТИРОВЩИКОВ
-    </footer>
+  <a href="https://dev.to/kcl/how-to-define-flutter-theme-c26">linkoch</a>
+  <div>
+    <ul>
+      <li>Текст 1</li>
+      <li>Текст 2</li>
+      <li>
+        Текст 3
+        <ul>
+          <li>Текст 3.1</li>
+          <li>Текст 3.2</li>
+          <li>Текст 3.3</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <h3>
+    <code>span:nth-child(2n+1)</code>, БЕЗ элемента <code>&lt;em&gt;</code> в
+    группе элементов-потомков.
+  </h3>
+  <p>Элементы 1, 3, 5 и 7 будут выбраны.</p>
+  <div class="first">
+    <span>Span 1!</span>
+    <span>Span 2</span>
+    <span>Span 3!</span>
+    <span>Span 4</span>
+    <span>Span 5!</span>
+    <span>Span 6</span>
+    <span>Span 7!</span>
+  </div>
+  <br />
+  <h3>
+    <code>span:nth-child(2n+1)</code>, С элементом <code>&lt;em&gt;</code> в
+    группе элементов-потомков.
+  </h3>
+  <p>
+    Элементы 1, 5 и 7 будут выбраны.<br />
+    3 используется в подсчёте потому что это элемент-потомок, но он не выбран
+    потому что он не <code>&lt;span&gt;</code>.
+  </p>
+  <div class="second">
+    <span>Span!</span>
+    <span>Span</span>
+    <em>Это `em`.</em>
+    <span>Span</span>
+    <span>Span!</span>
+    <span>Span</span>
+    <span>Span!</span>
+    <span>Span</span>
+  </div>
+  <a href="#">This is a hyperlink</a>
+  <br>
+  <br>
+  <br>
+  <div>Вот только эту первую строку и открасит по всей ширине строки. This is some more text, and some more after that. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+    Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.</div>
+  <a href="#">This is a hyperlink</a>
+  <div class="container">
+    <h1>Заголовок</h1>
+    <p>можно поменять <span>текст</span>, на свой, но код подгонять нельзя.</p>
+    <h2> Заголовок 2 уровня</h2>
+    <p>Ваша задача
+      Сделайте заголовки h1 синими.
+      Присвойте заголовкам h2 синий фон и белый текст.
+      Заставить текст, заключенный в диапазон, иметь размер шрифта 200%
+    </p>
   </div>
 </body>
 </html>
