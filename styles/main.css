@@ -51,10 +51,10 @@ span, div em {
     background-color: lime;
 }
 h1::before {
-    content: url(/images/flyaig.png);
+    content: url(/image/flyaig.png);
 }
 a::after {
-    content: url(/images/LFrT9llTd5E.jpg);
+    content: url(/image/LFrT9llTd5E.jpg);
 }
 span, div em {
     padding: 5px;
