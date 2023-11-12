@@ -58,7 +58,7 @@ dt {
 }
 header {
     position: relative;
-    background: no-repeat center url(/build1/images/pzh.jpg);
+    background: no-repeat center url(image/pzh.jpg);
     z-index: 0;
     text-align: center;
     color: orange;
