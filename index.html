@@ -1,86 +1,584 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/main.css">
-    <title>Poisitioning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+            $('[data-bs-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/btrp.css">
+    <title>BTSTRP</title>
 </head>
 <body>
-    <header>ПЖПЖПЖПЖПЖПЖПЖПЖ</header>
-    <div id="dv1" class="sssh">
-        In mathematics, a field is a set on which addition, subtraction, multiplication, and division are defined and behave as the corresponding operations on rational and real numbers do.
-    </div>
-    <div id="dv2" class="sssh">
-        A field is thus a fundamental algebraic structure which is widely used in algebra, number theory, and many other areas of mathematics.
-    </div>
-    <div id="dv3" class="sssh">
-        11010101010 10100001101 01001000000 00000101010 00000001111 10010000000 00000000001 11001000001 00000000001
-    </div>
-    <div id="dv4" class="sssh">
-        An equivalent, and more succinct, definition is: a field has two commutative operations, called addition and multiplication; it is a group under addition with 0 as the additive identity; the nonzero elements are a group under multiplication with 1 as the multiplicative identity; and multiplication distributes over addition.
-    </div>
-    <div class="fixdv">
-        THIS THING IS FIIIIIIIIIIIIIIIIXXXXXXXXXXXXXXXEEEEEEEED
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="maindiv">
-        <div id="fixdv" class="subdiv2">
-            THIS THING IS FIIIIIIIIIIIIIIIIIIIIIIIIIIIXXXXXXXXXXXXXXXXXXXXXEEEEEEEED
+    <header>
+        <!-- Навигационная панель -->
+        <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar-brand" href="#"><img src="bsimg/mathhub.jpg"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 me-5">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                        </li>
+                        <!-- Выпадающий список -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Разделы
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Математический анализ</a></li>
+                                <li><a class="dropdown-item" href="#">Линейная алгебра</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Поверхностные интегралы</a></li>
+                                <li><a class="dropdown-item" href="#">Линейные пространства</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Другое</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/Tyferse/websheet/tree/dz7btstrp">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">А вопросы будут?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">А вопросы будут.</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex col-3 justify-content-start" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                        <button class="btn btn-outline-primary" type="submit">Поиск</button>
+                    </form>
+
+                    <!-- Модальное окно для входа или регистрации -->
+                    <button type="button" class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#modal-sign-in">
+                        Войти
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Модальные окна с формами авторизации -->
+        <div class="modal fade" id="modal-sign-in" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-theme="dark" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel1">Войти в аккаунт или
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-register">
+                                зарегистрироваться
+                            </a>
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <input class="form-control" type="text" placeholder="Логин или адрес электронной почты" aria-label="Логин или адрес электронной почты">
+                            <input class="form-control" type="password" placeholder="Пароль" aria-label="Пароль">
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-around">
+                        <button type="button" class="btn btn-primary">Войти</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>
-        Modern differential geometry (1900–2000)
-        The subject of modern differential geometry emerged out of the early 1900s in response to the foundational contributions of many mathematicians, including importantly the work of Henri Poincaré on the foundations of topology.[12] At the start of the 1900s there was a major movement within mathematics to formalise the foundational aspects of the subject to avoid crises of rigour and accuracy, known as Hilbert's program. As part of this broader movement, the notion of a topological space was distilled in by Felix Hausdorff in 1914, and by 1942 there were many different notions of manifold of a combinatorial and differential-geometric nature.[12]
+        <div class="modal fade" id="modal-register" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-theme="dark" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Зарегистрироваться или
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-sign-in">
+                                войти
+                            </a>
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <input class="form-control" type="text" placeholder="Логин" aria-label="Логин">
+                            <input class="form-control" type="password" placeholder="Пароль" aria-label="Пароль">
+                            <div id="passwordHelpBlock2" class="form-text">
+                                Ваш пароль должен состоять из 8-20 символов, содержать буквы, цифры и специальные символы, но не должен содержать пробелов или эмодзи.
+                            </div>
+                            <input class="form-control" type="email" placeholder="Адрес электронной почты" aria-label="Адрес электронной почты">
+                            <br>
+                            <input class="form-check-input" type="checkbox" value="" aria-label="Зато не диффуры?" id="check2">
+                            <label class="form-check-label" for="check2">Зато не диффуры?</label>
+                            <br>
+                            <br>
+                            <label for="inputGroupSelect02">Предпочитаемое место жительства</label>
+                            <br>
+                            <select class="form-select" id="inputGroupSelect02">
+                                <option selected>Отсутствует</option>
+                                <option value="1">Кампус</option>
+                                <option value="2">Город</option>
+                                <option value="3">Подвал</option>
+                                <option value="4">Под мостом</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-around">
+                        <button type="button" class="btn btn-primary">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main data-bs-theme="dark">
+        <article>
+            <h1>Добро пожаловать на <img src="bsimg/mathhub.jpg"></h1>
+            <br>
+            <!-- Карусель -->
+            <div id="carouselCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="bsimg/intfuncs.png" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Необычные функции</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="bsimg/amgusgraph.png" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Интересные графики</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="bsimg/integrales.jpg" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Интегральчики</h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+            <br>
+            <div id="liveAlertPlaceholder" class="alert alert-danger alert-dismissible fade show" role="alert">
+                Внимание! Весь нижеперечисленный контент создан математиками-программистами и не поддаётся пониманию обычным людям.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+            </div>
+            <div id="liveAlertPlaceholder2" class="alert alert-warning alert-dismissible fade show" role="alert">
+                Бегите, он понял!!!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+            </div>
+            <br>
+            <br>
 
-        Interest in the subject was also focused by the emergence of Einstein's theory of general relativity and the importance of the Einstein Field equations. Einstein's theory popularised the tensor calculus of Ricci and Levi-Civita and introduced the notation g for a Riemannian metric, and
-        Γ\Gamma  for the Christoffel symbols, both coming from G in Gravitation. Élie Cartan helped reformulate the foundations of the differential geometry of smooth manifolds in terms of exterior calculus and the theory of moving frames, leading in the world of physics to Einstein–Cartan theory.[13][4]
-        </p>
-        <p>
-        Following this early development, many mathematicians contributed to the development of the modern theory, including Jean-Louis Koszul who introduced connections on vector bundles, Shiing-Shen Chern who introduced characteristic classes to the subject and began the study of complex manifolds, Sir William Vallance Douglas Hodge and Georges de Rham who expanded understanding of differential forms, Charles Ehresmann who introduced the theory of fibre bundles and Ehresmann connections, and others.[13][4] Of particular importance was Hermann Weyl who made important contributions to the foundations of general relativity, introduced the Weyl tensor providing insight into conformal geometry, and first defined the notion of a gauge leading to the development of gauge theory in physics and mathematics.
-
-        In the middle and late 20th century differential geometry as a subject expanded in scope and developed links to other areas of mathematics and physics. The development of gauge theory and Yang–Mills theory in physics brought bundles and connections into focus, leading to developments in gauge theory. Many analytical results were investigated including the proof of the Atiyah–Singer index theorem. The development of complex geometry was spurred on by parallel results in algebraic geometry, and results in the geometry and global analysis of complex manifolds were proven by Shing-Tung Yau and others. In the latter half of the 20th century new analytic techniques were developed in regards to curvature flows such as the Ricci flow, which culminated in Grigori Perelman's proof of the Poincaré conjecture. During this same period primarily due to the influence of Michael Atiyah, new links between theoretical physics and differential geometry were formed. Techniques from the study of the Yang–Mills equations and gauge theory were used by mathematicians to develop new invariants of smooth manifolds. Physicists such as Edward Witten, the only physicist to be awarded a Fields medal, made new impacts in mathematics by using topological quantum field theory and string theory to make predictions and provide frameworks for new rigorous mathematics, which has resulted for example in the conjectural mirror symmetry and the Seiberg–Witten invariants.
-        </p>
-    </div>
-    <div>
-        <h1>Sticky positioning</h1>
-        <dl>
-            <dt>A</dt>
-            <dd>Apple</dd>
-            <dd>Ant</dd>
-            <dd>Altimeter</dd>
-            <dd>Airplane</dd>
-            <dt>B</dt>
-            <dd>Bird</dd>
-            <dd>Buzzard</dd>
-            <dd>Bee</dd>
-            <dd>Banana</dd>
-            <dd>Beanstalk</dd>
-            <dt>C</dt>
-            <dd>Calculator</dd>
-            <dd>Cane</dd>
-            <dd>Camera</dd>
-            <dd>Camel</dd>
-            <dt>D</dt>
-            <dd>Duck</dd>
-            <dd>Dime</dd>
-            <dd>Dipstick</dd>
-            <dd>Drone</dd>
-            <dt>E</dt>
-            <dd>Egg</dd>
-            <dd>Elephant</dd>
-            <dd>Egret</dd>
-        </dl>
-    </div>
+            <!-- Хлебные крошки -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="#">Другое</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Desmos</li>
+                </ol>
+            </nav>
+            <h2>Галерея</h2>
+            <hr>
+            <div class="row">
+                <div class="col-3">
+                    <div class="sticky-top bg-body-tertiary shadow-lg">
+                        <nav id="navbar-scroll" class="h-100 flex-column align-items-stretch pe-4 border-end sticky-bottom">
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link p-1 rounded" href="#functions">Функции</a>
+                                <a class="nav-link p-1 rounded" href="#graphs">Графики</a>
+                                <a class="nav-link p-1 rounded" href="#integrals">Интегралы</a>
+                                <a class="nav-link p-1 rounded" href="#series">Ряды</a>
+                            </nav>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-scroll" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
+                        <h3 id="functions">Функции</h3>
+                        <p>Самые интересные функции перечислены здесь</p>
+                        <!-- Карточки -->
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="bsimg/func2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Функция биномиального распределения</h5>
+                                    <p class="card-text">Взято из теории вероятностей</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">
+                                        Если заменить факториал на Гамма-функцию,
+                                        то можно расширить на вещественные значения.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/func3.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Натуральный логарифм по основанию 2</h5>
+                                    <p class="card-text">Без комментариев</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">Появилось абсолютно случайно</small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/func4.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Какое-то дифференциальное уравнение</h5>
+                                    <p class="card-text">Взято с видоса на ютубе</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">Ох и зря я туда полез...</small>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="bsimg/func5.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Второе дифференциальное уравнение</h5>
+                                    <p class="card-text">Да, это то же самое, что и предыдущее уравнение, но с другой функцией.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">
+                                        Да
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/func6.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Третье дифференциальное уравнение</h5>
+                                    <p class="card-text">Но с чуть более странной функцией.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">Нет</small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/func7.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Параметрически заданное уравнение</h5>
+                                    <p class="card-text">Да, так можно.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">И это хорошо</small>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <h3 id="graphs">Графики</h3>
+                        <p>Целых 9 великолепных графиков представлены ниже!</p>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="bsimg/graph1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Сфера</h5>
+                                    <p class="card-text">Да, это трёхмерный график на двумерной плоскости. До сих пор взрывает мозг.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">
+                                        Взято из fandom.desmos
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/graph2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Точки и синусоиды</h5>
+                                    <p class="card-text">Нужно было для задачи.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">Боль</small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/graph3.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Функция распределения объёма единичной x-мерной сферы</h5>
+                                    <p class="card-text">Да, это жёстко. И да, для этого есть формула.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">Странная вещь</small>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="bsimg/graph4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Какой-то периодический график</h5>
+                                    <p class="card-text">Да.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">
+                                        Сделан по импровизации
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/graph5.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Интегральное преобразование функции 1</h5>
+                                    <p class="card-text">Прикольная вещь. Сглаживает острые углы у графиков функций.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">Одобряю</small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/graph6.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Что-то напоминает...</h5>
+                                    <p class="card-text">Осуждаю.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">Максимально осуждаю</small>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="bsimg/graph7.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Фрактальная кривая 1</h5>
+                                    <p class="card-text">Выглядит прикольно.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">
+                                        Рекомендую
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/graph8.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Фрактальная кривая 2</h5>
+                                    <p class="card-text">Тоже прикольно, но более угловато.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">Рекомендую</small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/graph9.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Фрактальная кривая 3</h5>
+                                    <p class="card-text">Один из самых красивых графиков.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">Максимально одобряю</small>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <h3 id="integrals">Интегралы</h3>
+                        <p> Мой любимый раздел: "Интегрирование в уме".</p>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="bsimg/int1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">По-детски сложный интеграл</h5>
+                                    <p class="card-text">Почему? Потому что большое число в подынтегральной функции</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/int2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Неинтегрируемое</h5>
+                                    <p class="card-text">Vietnamese flashbacks.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/int3.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Прикольный интеграл</h5>
+                                    <p class="card-text">Такое мы интегрируем.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="bsimg/int4.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Интеграл в общем виде</h5>
+                                    <p class="card-text">Невозможно выразить в элементарных функциях.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/int5.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Интеграл от произведения Гамма-функций</h5>
+                                    <p class="card-text">Да, так можно.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/int6.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Забаненный интеграл</h5>
+                                    <p class="card-text">БАН!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="bsimg/int7.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Двойной интеграл</h5>
+                                    <p class="card-text">Ну, пока норм.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/int8.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Производная от интеграла</h5>
+                                    <p class="card-text">Зачем? Я не знаю.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/int9.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Интегральное преобразование Вейерштрасса</h5>
+                                    <p class="card-text">Сглаживает острые углы графика почти любой функции.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <h3 id="series">Ряды</h3>
+                        <p>Ну и напоследок несколько рядов, с которыми на первый взгляд вообще не понятно, что делать и как считать их сумму.</p>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="bsimg/series1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Полугиперболико-тригонометрический ряд</h5>
+                                    <p class="card-text">Интересно.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/series2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Знакочередующийся ряд обратных натуральных логарифмов</h5>
+                                    <p class="card-text">Сложно.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/series3.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Необычный тригонометрический ряд</h5>
+                                    <p class="card-text">Странно.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="bsimg/series4.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ряд синусоидальных обратных экспонент</h5>
+                                    <p class="card-text">Непонятно.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/series5.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Экспоненциально-обратный относительный ряд</h5>
+                                    <p class="card-text">Сложно.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="bsimg/series6.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">СУС</h5>
+                                    <p class="card-text">СУС.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <h3>Часто задаваемые вопросы</h3>
+            <br>
+            <!-- Аккордеон -->
+            <div class="accordion" id="accordion-faq">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Почему именно MATHhub?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            MATH - это математика, т. е. тема сайта, а hub, потому что здесь собрано всё или почти всё по теме (вдохновлено
+                            <!-- Всплывающая подсказка -->
+                            <a href="#" class="text-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки. Основан на системе контроля версий Git.">GitHub</a>,
+                            а не тем, о чём вы могли подумать).
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Почему desmos?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Потому что desmos - это один из лучший графических калькуляторов, который вы только можете найти в интернете (ИМХО).
+                            В нём удобно набирать многие математические выражения (за исключением матриц и кратных интегралов) и оформлять записи.
+                            Плюс desmos (в теории) <a href="#" class="text-light" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Можно реализовать любую вычислимую функцию">полон по Тьюрингу</a>.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Не слишком много математики?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Нет.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
     <hr>
-    <h3>Выполненные задания</h3>
-    <div class="tasks">
-        <img src="image/flexboxfroggy.png">
-        <img src="image/gridgarden.png">
-        <img id="fbtd" src="image/flexboxdefence.png">
+    <div>
+    <footer>
+        <div class="container-fluid row">
+            <ul class="nav justify-content-center">
+                <li><a href="#" class="nav-link text-info">Контакты</a></li>
+                <li><a href="#" class="nav-link text-info">Копирайты</a></li>
+                <li><a href="#" class="nav-link text-info">MATH</a></li>
+            </ul>
+            <br>
+            <br>
+        </div>
+    </footer>
     </div>
 </body>
 </html>
