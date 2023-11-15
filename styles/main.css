@@ -1,84 +1,46 @@
 body {
-    height: 1200px;
-}
-#dv1 {
-    position: relative;
-    left: 120px;
-    top: 20px;
-    background-color: blue;
-}
-#dv2 {
-    position: absolute;
-    inset: 0;
-/*    top: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-}
-#dv3 {
-    position: absolute;
-    inset: 10px 200px 20px;
-}
-#dv4 {
-    position: absolute;
-    top: 40px; left: 40px;
-}
-.sssh {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: red;
+    background-color: #202727;
     color: white;
 }
-.subdiv2 {
-    height: 100px;
-    width: 100px;
-    background-color: red;
+nav[aria-label="breadcrumb"] {
+    --bs-breadcrumb-divider: '>';
+}
+.navbar {
+    font-size: 80%;
+    background-color: #010201;
+}
+nav.navbar > div > a.navbar-brand > img {
+    height: 40px;
+    width: 120px;
+}
+button[data-bs-target="#modal-sign-in"] {
+    margin-left: auto;
+}
+#passwordHelpBlock {
+    font-size: 0.75em;
+}
+main {
+    margin: 5em auto;
+    width: 1000px !important;
+}
+h1 {
     color: white;
-}
-#fixdv {
-    position: fixed;
-    top: 80px;
-    left: 10px;
-}
-.maindiv {
-    width: 500px;
-    height: 300px;
-    overflow: scroll;
-    margin-left: 150px;
-}
-dt {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    margin: 1em 0;
-}
-header {
-    position: relative;
-    background: no-repeat center url(image/pzh.jpg);
-    z-index: 0;
     text-align: center;
-    color: orange;
-    font-size: 3.2em;
+    font-size: 3em;
 }
-header::after {
-    position: absolute;
-    background-color: #00e6fb;
-    z-index: -1;
+h1 img {
+    width: 300px;
+    height: 1.8em;
 }
-.tasks {
-    display: grid;
-    grid-template: repeat(2, 220px) 420px / 800px;
-    margin: 3em auto;
+#navbar-scroll {
+    font-size: 1.2em;
 }
-.tasks img {
-    width: 528px;
-    height: 207px;
+h2 {
+    font-size: 2.3em;
 }
-#fbtd {
-    width: 720px;
-    height: 405px;
+div.col-3 > div.sticky-top {
+
+}
+.sticky-top{
+    top: 5em;
 }
