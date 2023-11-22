@@ -19,9 +19,13 @@ button[data-bs-target="#modal-sign-in"] {
 #passwordHelpBlock {
     font-size: 0.75em;
 }
+.carousel-item > img {
+    width: 100%;
+    height: 40vh;
+}
 main {
     margin: 5em auto;
-    width: 1000px !important;
+    width: 70vw;
 }
 h1 {
     color: white;
@@ -38,9 +42,62 @@ h1 img {
 h2 {
     font-size: 2.3em;
 }
-div.col-3 > div.sticky-top {
-
-}
 .sticky-top{
     top: 5em;
+}
+footer {
+    margin: 1em auto;
+}
+@media screen and (min-width: 360px) and (max-width:720px) { /* Стиль для отображения в браузере */
+    .navbar {
+        font-size: 0.8em;
+        background-color: #010201;
+        flex-wrap: wrap;
+    }
+    .navbar-collapse {
+        flex-wrap: wrap;
+    }
+    nav.navbar > div > a.navbar-brand > img {
+        height: 1.5em;
+        width: 4.5em;
+    }
+    ul.navbar-nav {
+        flex-wrap: wrap;
+    }
+    #passwordHelpBlock {
+        font-size: 0.5em;
+    }
+    main {
+        margin: 3.6em auto;
+        width: 90vw;
+    }
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 2.5em;
+    }
+    h1 img {
+        width: 6em;
+        height: 2em;
+    }
+    #navbar-scroll {
+        font-size: 0.9em;
+    }
+    button.btn-warning {
+        margin-top: 1em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .sticky-top{
+        top: 4em;
+    }
+    .carousel-item > img {
+        width: 100%;
+        height: 30vh;
+    }
+    .carousel-caption {
+        font-size: 0.4em;
+        flex-wrap: wrap;
+    }
 }
